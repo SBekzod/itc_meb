@@ -1,0 +1,22 @@
+{
+  "name": "itc_meb",
+  "version": "1.0.0",
+  "description": "this is for changelog",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SBekzod/itc_meb.git"
+  },
+  "author": "itc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SBekzod/itc_meb/issues"
+  },
+  "homepage": "https://github.com/SBekzod/itc_meb#readme"
+}
