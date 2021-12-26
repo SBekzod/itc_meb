@@ -181,7 +181,7 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
 #container {position:relative;margin:0 auto;width:1200px;min-height:500px;height:auto !important}
 #container:after {display:block;visibility:hidden;clear:both;content:""}
 #container .shop-content {position:relative;padding:1px 0}
-#container .is_index {margin-left:285px}
+/*#container .is_index {margin-left:285px}*/
 .shop-content #bo_v{margin-top:20px}
 
 #idx_hit {overflow:hidden}

@@ -25,7 +25,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/owlcarousel/owl.carou
     <!-- #container 시작 { -->
     <div id="container">
 
-        <div>Hello Word</div>
+        <div style="background-color: blue; width: 100%">Hello Word</div>
 
         <?php if(defined('_INDEX_')) { ?>
         <?php } // end if ?>

@@ -1,0 +1,267 @@
+#container {
+    width: 1440px;
+}
+#container .is_index {
+    margin-left: 0px;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 4675px;
+    width: 1440px;
+    background: linear-gradient(180deg, #283040 0%, #344666 13.02%, #202329 33.85%, #374B70 66.7%, #131113 83.86%);
+}
+
+.product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1150px;
+    width: 1236px;
+}
+
+.product p {
+    position: relative;
+    display: flex;
+}
+
+.our_pr {
+    position: relative;
+    display: flex;
+    margin-top: 93px;
+
+    /* Heading / H2 */
+
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120%;
+    /* identical to box height, or 48px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.product_frame {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 32px 0px 32px 0px;
+    width: 1236px;
+    height: 446px;
+}
+
+.product_box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 285px;
+    height: 105%;
+    border-radius: 10px;
+    background-color: #F4F5F7;;
+}
+
+.product_img {
+    position: relative;
+    display: flex;
+    width: 285px;
+    height: 301px;
+    justify-content: flex-end;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: url("https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+    /*background: url("https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=300&q=60");*/
+    background-size: cover;
+    max-width: 100%;
+    background-position: bottom;
+}
+
+.sale_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin: 15px 15px;
+
+    /* Color / Red Accents */
+
+    background: #E97171;
+}
+
+.sale_box p {
+    position: relative;
+
+    /* Body / Normal - Medium */
+
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+
+
+    /* Color / White */
+
+    color: #FFFFFF;
+}
+
+.new_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin: 15px 15px;
+
+    /* Color / Red Accents */
+
+    background: #2EC1AC;
+}
+
+.new_box p {
+    position: relative;
+
+    /* Body / Normal - Medium */
+
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+
+
+    /* Color / White */
+
+    color: #FFFFFF;
+}
+
+.product_name {
+    position: relative;
+    display: flex;
+
+    /* Heading / H5 */
+
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    /* identical to box height, or 29px */
+
+
+    /* Color / Gray 1 */
+
+    color: #3A3A3A;
+}
+
+.product_desc {
+    position: relative;
+    display: flex;
+    margin: 8px 0px 8px 0px;
+
+    /* Body / Normal - Medium */
+
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+
+
+    /* Color / Gray 3 */
+
+    color: #898989;
+}
+
+.price_frame {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    width: 238px;
+    height: 30px;
+
+}
+
+.price {
+    position: relative;
+
+    /* Body / Xtra Large - semibold */
+
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+
+
+    /* Color / Gray 1 */
+
+    color: #3A3A3A;
+
+
+}
+
+.no_price {
+    position: relative;
+
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+
+    text-decoration-line: line-through;
+
+    /* Color / Gray 4 */
+
+    color: #B0B0B0;
+
+}
+
+.product_btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 245px;
+    height: 48px;
+    background: #616161;
+    border: 1px solid #616161;
+    box-sizing: border-box;
+    border-radius: 47px;
+
+    /* TEXT */
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+
+
+    /* Color / Light BG */
+
+    color: #F4F5F7;
+
+}
+
