@@ -25,7 +25,80 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/owlcarousel/owl.carou
     <!-- #container 시작 { -->
     <div id="container">
 
-        <div style="background-color: blue; width: 100%">Hello Word</div>
+        <!-- START HEADER-->
+        <div class="header_frame">
+            <div class="navbar_frame">
+                <div class="menu_logo">Funiro.</div>
+                <div class="nav_menu">
+                    <div class="product_menu">
+                        <select>
+                            <option selected>Product</option>
+                            <option>Product 2</option>
+                            <option>Product 3</option>
+                            <option>Product 4</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select>
+                            <option selected>Rooms</option>
+                            <option>Product 2</option>
+                            <option>Product 3</option>
+                            <option>Product 4</option>
+                        </select>
+                    </div>
+                    <div class="inspirations">Inspirations</div>
+                </div>
+                <div class="menu_search"><input class="" type="text" placeholder="Search for minimalist chair"></div>
+                <div class="effect_menu">
+                    <div><img src="/css/shop/assets/Heart.svg"></div>
+                    <div><img src="/css/shop/assets/Cart.svg"></div>
+                    <div>Light</div>
+                    <div class="login_btn"><button type="button">Login</button></div>
+                </div>
+            </div>
+            <div class="next_frame">
+                <div class="next_box">
+                    <div class="nav_next">
+                        <div class="next_btn"><div class="next_btn_round"></div></div>
+                        <div class="next_btn_round"></div>
+                        <div class="next_btn_round"></div>
+                    </div>
+
+                    <div class="next_prev_btn">
+                        <div class="next_menu"><img src="/css/shop/assets/Line.png"></div>
+                        <div class="prev_menu"><img src="/css/shop/assets/Line.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_img">
+                <div class="header_images">
+                    <div class="header_img_frame">
+                        <div class="header_img_box">
+                            <p class="header_img_title">Bohauss</p>
+                            <p class="header_img_desc">Luxury big sofa 2-seat</p>
+                            <div class="header_img_frame_bott">
+                                <p class="header_bott_title">Rp 17.000.000</p>
+                                <img src="/css/shop/assets/arrow2.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ABSOLUTE -->
+            <div class="abs_frame">
+                <div class="abs_box">
+                    <p class="abs_title">High-Quality Furniture Just For You</p>
+                    <p class="abs_desc">Our furniture is made from selected and best quality materials that are suitable for your dream home</p>
+                    <div class="abs_btn">
+                        <button type="button">SHop Now</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- END  HEADER-->
 
         <?php if(defined('_INDEX_')) { ?>
         <?php } // end if ?>
