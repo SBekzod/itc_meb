@@ -58,6 +58,23 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head_r.php');
             <!-- PRODUCT FRAME-->
             <div class="product_frame">
                 <div class="product_box">
+                    <div class="product_hover">
+                        <button  type="text"  class="hover_btn">Add to Cart</button>
+                        <div class="share_like_box">
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/share.svg">
+                                    <p class="hover_txt">Share</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/Heart.svg">
+                                    <p class="hover_txt">Like</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                     <div class="product_img">
                         <div class="sale_box"><p>-30%</p></div>
                     </div>
@@ -71,6 +88,23 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head_r.php');
                     </div>
                 </div>
                 <div class="product_box">
+                    <div class="product_hover">
+                        <button  type="text"  class="hover_btn">Add to Cart</button>
+                        <div class="share_like_box">
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/share.svg">
+                                    <p class="hover_txt">Share</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/Heart.svg">
+                                    <p class="hover_txt">Like</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                     <div class="product_img">
                         <div class="sale_box"><p>-10%</p></div>
                     </div>
@@ -84,6 +118,23 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head_r.php');
                     </div>
                 </div>
                 <div class="product_box">
+                    <div class="product_hover">
+                        <button  type="text"  class="hover_btn">Add to Cart</button>
+                        <div class="share_like_box">
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/share.svg">
+                                    <p class="hover_txt">Share</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/Heart.svg">
+                                    <p class="hover_txt">Like</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                     <div class="product_img">
                         <div class="sale_box"><p>-50%</p></div>
                     </div>
@@ -97,6 +148,23 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head_r.php');
                     </div>
                 </div>
                 <div class="product_box">
+                    <div class="product_hover">
+                        <button  type="text"  class="hover_btn">Add to Cart</button>
+                        <div class="share_like_box">
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/share.svg">
+                                    <p class="hover_txt">Share</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/Heart.svg">
+                                    <p class="hover_txt">Like</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                     <div class="product_img">
                         <div class="new_box"><p>New</p></div>
                     </div>
@@ -114,6 +182,23 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head_r.php');
             <!-- PRODUCT FRAME-->
             <div class="product_frame">
                 <div class="product_box">
+                    <div class="product_hover">
+                        <button  type="text"  class="hover_btn">Add to Cart</button>
+                        <div class="share_like_box">
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/share.svg">
+                                    <p class="hover_txt">Share</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/Heart.svg">
+                                    <p class="hover_txt">Like</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                     <div class="product_img">
                         <div class="new_box"><p>New</p></div>
                     </div>
@@ -127,6 +212,23 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head_r.php');
                     </div>
                 </div>
                 <div class="product_box">
+                    <div class="product_hover">
+                        <button  type="text"  class="hover_btn">Add to Cart</button>
+                        <div class="share_like_box">
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/share.svg">
+                                    <p class="hover_txt">Share</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/Heart.svg">
+                                    <p class="hover_txt">Like</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                     <div class="product_img">
                         <div class="sale_box"><p>-80%</p></div>
                     </div>
@@ -140,6 +242,23 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head_r.php');
                     </div>
                 </div>
                 <div class="product_box">
+                    <div class="product_hover">
+                        <button  type="text"  class="hover_btn">Add to Cart</button>
+                        <div class="share_like_box">
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/share.svg">
+                                    <p class="hover_txt">Share</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/Heart.svg">
+                                    <p class="hover_txt">Like</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                     <div class="product_img">
                         <div class="sale_box"><p>-30%</p></div>
                     </div>
@@ -153,6 +272,23 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head_r.php');
                     </div>
                 </div>
                 <div class="product_box">
+                    <div class="product_hover">
+                        <button  type="text"  class="hover_btn">Add to Cart</button>
+                        <div class="share_like_box">
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/share.svg">
+                                    <p class="hover_txt">Share</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="share_like_frame">
+                                    <img src="/css/shop/assets/Heart.svg">
+                                    <p class="hover_txt">Like</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                     <div class="product_img">
                         <div class="new_box"><p>New</p></div>
                     </div>
@@ -167,7 +303,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head_r.php');
                 </div>
             </div>
             <!-- END PRODUCT FRAME-->
-            <div class="product_btn">Show More</div>
+            <button class="product_btn"><div class="">Go Shop</div></button>
         </div>
         <!--END PRODUCT-->
 
@@ -193,18 +329,18 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head_r.php');
                             <div class="txt_frame_inner">Inner Peace</div>
                         </div>
                         <div class="arrow_box">
-                            <div class="arrow_frame"><img src="/css/shop/assets/Vector1.svg"></div>
+                            <button class="arrow_frame"><img src="/css/shop/assets/Vector1.svg"></button>
                         </div>
                     </div>
                 </div>
                 <div class="small_img_box">
                     <div class="small_img">
-                        <div class="small_img_next_box"><img src="/css/shop/assets/Line.png"></div>
+                        <button class="small_img_next_box"><img src="/css/shop/assets/Line.png"></button>
                     </div>
                     <div class="next_img">
                         <div class="next_img_frame"><div class="next_img_btn"></div></div>
-                        <div class="next_img_frame"><div class="next_img_btn"></div></div>
-                        <div class="next_img_frame"><div class="next_img_btn"></div></div>
+                        <div class="next_img_btn"></div>
+                        <div class="next_img_btn"></div>
                     </div>
                 </div>
             </div>
@@ -217,7 +353,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head_r.php');
             <div class="tips_item_box">
                 <div class="tips_box_frame">
                     <div class="tips_img" style="background: url(/css/shop/assets/Rectangle32.png)">
-                        <div class="small_img_next_box"><img src="/css/shop/assets/Line1.svg"></div>
+                        <button class="small_img_next_box"><img src="/css/shop/assets/Line1.svg"></button>
                     </div>
                     <div class="tips_txt_box">
                         <p class="tips_txt_title">How to create a living room to love</p>
@@ -233,7 +369,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head_r.php');
                 </div>
                 <div class="tips_box_frame">
                     <div class="tips_img_two" style="background: url(/css/shop/assets/Rectangle32-2.png)">
-                        <div class="small_img_next_box"><img src="/css/shop/assets/Line.png"></div>
+                        <button class="small_img_next_box"><img src="/css/shop/assets/Line.png"></button>
                     </div>
                     <div class="tips_txt_box">
                         <p class="tips_txt_title">Make your cooking activity more fun with good setup</p>
@@ -244,8 +380,8 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head_r.php');
             <div class="tips_bott">
                 <div class="next_img">
                     <div class="next_img_frame"><div class="next_img_btn"></div></div>
-                    <div class="next_img_frame"><div class="next_img_btn"></div></div>
-                    <div class="next_img_frame"><div class="next_img_btn"></div></div>
+                    <div class="next_img_btn"></div>
+                    <div class="next_img_btn"></div>
                 </div>
             </div>
         </div>
