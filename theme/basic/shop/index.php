@@ -18,6 +18,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head_r.php');
     <!-- } 메인이미지 끝 -->
 <head>
     <link rel="stylesheet" href="/css/shop/index.css">
+    <script type="text/javascript" src="/js/shop/index.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
     <!--START BODY-->

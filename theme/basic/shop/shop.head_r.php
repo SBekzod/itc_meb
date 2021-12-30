@@ -168,9 +168,9 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/owlcarousel/owl.carou
             <div class="next_frame">
                 <div class="next_box">
                     <div class="nav_next">
-                        <div class="next_btn"><div class="next_btn_round"></div></div>
-                        <div class="next_btn_round"></div>
-                        <div class="next_btn_round"></div>
+                        <div id="round1" class="next_btn"><div class="next_btn_round"></div></div>
+                        <div id="round2" class="next_btn" style="border: none"><div class="next_btn_round"></div></div>
+                        <div id="round3" class="next_btn" style="border: none"><div class="next_btn_round"></div></div>
                     </div>
 
                     <div class="next_prev_btn">

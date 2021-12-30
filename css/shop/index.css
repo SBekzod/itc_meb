@@ -260,7 +260,6 @@ option {
     background: #FFFFFF;
     opacity: 0.3;
     transform: matrix(-1, 0, 0, 1, 0, 0);
-    /*background: #FFFFFF;*/
 }
 
 .prev_menu {
@@ -280,14 +279,16 @@ option {
 .header_images {
     position: relative;
     display: flex;
-    width: 1356px;
+    width: 1057px;
     height: 553px;
     justify-content: flex-end;
     align-items: flex-end;
     /*margin: 0px 10px 0px 10px;*/
 
-    background: url("https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background: url("https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80");
     background-size: cover;
+    /*background-position: bottom;*/
+    max-width: 100%;
 }
 
 
