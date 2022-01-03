@@ -145,7 +145,7 @@ option {
     padding-left: 42px;
     width: 404px;
     height: 45px;
-    background-image: url("/css/shop/assets/Ellipse.svg");
+    background-image: url("/assets/assets/Ellipse.svg");
     background-repeat: no-repeat;
     background-position: 11px 11px;
 
@@ -1006,7 +1006,7 @@ option {
     height: 486px;
 
     /*background-color: black;*/
-    background: url("/css/shop/assets/Rectangle25.png");
+    background: url("/assets/assets/Rectangle25.png");
     background-size: cover;
     background-position: center;
 }
