@@ -138,7 +138,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/owlcarousel/owl.carou
         <!-- START HEADER-->
         <div class="header_frame">
             <div class="navbar_frame">
-                <div class="menu_logo"><a href=""><img src="/css/shop/assets/GoodFurniture.png"></a></div>
+                <div class="menu_logo"><a href=""><img src="/assets/assets/GoodFurniture.png"></a></div>
                 <div class="nav_menu">
                     <div class="product_menu">
                         <select>
@@ -159,8 +159,8 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/owlcarousel/owl.carou
                 </div>
                 <div class="menu_search"><input class="" type="text" placeholder="Search for minimalist chair"></div>
                 <div class="effect_menu">
-                    <div><a href=""><img src="/css/shop/assets/Heart.svg"></a></div>
-                    <div><a href=""><img src="/css/shop/assets/Cart.svg"></a></div>
+                    <div><a href=""><img src="/assets/assets/Heart.svg"></a></div>
+                    <div><a href=""><img src="/assets/assets/Cart.svg"></a></div>
                     <div>Light</div>
                     <div class="login_btn"><button type="button">Login</button></div>
                 </div>
@@ -174,8 +174,8 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/owlcarousel/owl.carou
                     </div>
 
                     <div class="next_prev_btn">
-                        <button class="next_menu"><img src="/css/shop/assets/Line.png"></button>
-                        <button class="prev_menu"><img src="/css/shop/assets/Line.png"></button>
+                        <button class="next_menu"><img src="/assets/assets/Line.png"></button>
+                        <button class="prev_menu"><img src="/assets/assets/Line.png"></button>
                     </div>
                 </div>
             </div>
@@ -187,7 +187,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/owlcarousel/owl.carou
                             <p class="header_img_desc">Luxury big sofa 2-seat</p>
                             <div class="header_img_frame_bott">
                                 <p class="header_bott_title">Rp 17.000.000</p>
-                                <img src="/css/shop/assets/arrow2.svg">
+                                <img src="/assets/assets/arrow2.svg">
                             </div>
                         </div>
                     </div>

@@ -22,10 +22,10 @@ $admin = get_admin("super");
         <div class="footer_box">
             <div class="footer_container">
                 <div class="footer_one">
-                    <a href=""><p class="footer_title"><img src="/css/shop/assets/GoodFurniture.png"></p></a>
+                    <a href=""><p class="footer_title"><img src="/assets/assets/GoodFurniture.png"></p></a>
                     <p class="footer_about">Worldwide furniture store since 2020. We sell over 1000+ branded products on our website</p>
-                    <p class="footer_address"><img src="/css/shop/assets/Subtract.svg" style="margin-right: 10px"> Sawojajar Malang, Indonesia</p>
-                    <p class="footer_telephone"><img src="/css/shop/assets/phone.svg" style="margin-right: 10px"> +6289 456 3455</p>
+                    <p class="footer_address"><img src="/assets/assets/Subtract.svg" style="margin-right: 10px"> Sawojajar Malang, Indonesia</p>
+                    <p class="footer_telephone"><img src="/assets/assets/phone.svg" style="margin-right: 10px"> +6289 456 3455</p>
                     <a href=""><p class="footer_website">www.funiro.com</p></a>
                 </div>
                 <div class="footer_two" >
@@ -53,7 +53,7 @@ $admin = get_admin("super");
                     <p class="footer_title">Stay Updated</p>
                     <div class="footer_input">
                         <input type="text" placeholder="Submit Your Email">
-                        <button type="submit" class="footer_btn"><img src="/css/shop/assets/submit.svg"></button>
+                        <button type="submit" class="footer_btn"><img src="/assets/assets/submit.svg"></button>
                     </div>
                 </div>
             </div>
