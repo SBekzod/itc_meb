@@ -23,6 +23,51 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head_r.php');
 </head>
     <!--START BODY-->
     <div class="content">
+
+
+
+        <div class="next_frame">
+            <div class="next_box">
+                <div class="nav_next">
+                    <div id="round1" class="next_btn"><div class="next_btn_round"></div></div>
+                    <div id="round2" class="next_btn" style="border: none"><div class="next_btn_round"></div></div>
+                    <div id="round3" class="next_btn" style="border: none"><div class="next_btn_round"></div></div>
+                </div>
+
+                <div class="next_prev_btn">
+                    <button class="next_menu"><img src="/assets/assets/Line.png"></button>
+                    <button class="prev_menu"><img src="/assets/assets/Line.png"></button>
+                </div>
+            </div>
+        </div>
+        <div class="header_img">
+            <div class="header_images">
+                <div class="header_img_frame">
+                    <div class="header_img_box">
+                        <p class="header_img_title">Bohauss</p>
+                        <p class="header_img_desc">Luxury big sofa 2-seat</p>
+                        <div class="header_img_frame_bott">
+                            <p class="header_bott_title">Rp 17.000.000</p>
+                            <img src="/assets/assets/arrow2.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ABSOLUTE -->
+        <div class="abs_frame">
+            <div class="abs_box">
+                <p class="abs_title">High-Quality Furniture Just For You</p>
+                <p class="abs_desc">Our furniture is made from selected and best quality materials that are suitable for your dream home</p>
+                <div class="abs_btn">
+                    <button type="button">SHop Now</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
         <div class="service_frame">
             <div class="service_box">
                 <div class="service_img"><img src="/assets/assets/service1.svg"></div>
