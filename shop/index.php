@@ -1,5 +1,10 @@
 <?php
+
+error_log("PASSED 1\n", 3, '/home/martin/itc_meb/log/debug.log');
+
 include_once('./_common.php');
+
+error_log("here ".G5_THEME_SHOP_PATH, 3, '/home/martin/itc_meb/log/debug.log');
 
 if(defined('G5_THEME_PATH')) {
     require_once(G5_THEME_SHOP_PATH.'/index.php');
@@ -12,6 +17,8 @@ if (G5_IS_MOBILE) {
 }
 
 define("_INDEX_", TRUE);
+
+error_log("PASSED 1\n", 3, '/home/martin/itc_meb/log/debug.log');
 
 include_once(G5_SHOP_PATH.'/shop.head.php');
 ?>
@@ -48,7 +55,7 @@ include_once(G5_SHOP_PATH.'/shop.head.php');
 //히트상품
 $(function(){
     var hit_smt_val = parseInt($('#idx_hit .smt_40').attr("data-value"));
-    
+
     if(! hit_smt_val){
         hit_smt_val = 5;
     }

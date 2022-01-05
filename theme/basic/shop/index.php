@@ -8,6 +8,7 @@ if (G5_IS_MOBILE) {
 
 if(! defined('_INDEX_')) define('_INDEX_', TRUE);
 
+error_log("\nG5_THEME_SHOP_PATH :::". G5_THEME_SHOP_PATH, 3, '/home/martin/itc_meb/log/debug.log');
 include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 ?>
 
@@ -41,7 +42,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 //히트상품
 $(function(){
     var hit_smt_val = parseInt($('#idx_hit .smt_40').attr("data-value"));
-    
+
     if(! hit_smt_val){
         hit_smt_val = 5;
     }

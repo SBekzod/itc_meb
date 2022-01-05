@@ -270,7 +270,7 @@ if ($w == '') {
         include_once ('./register_form_update_mail1.php');
         $content = ob_get_contents();
         ob_end_clean();
-        
+
         $content = run_replace('register_form_update_mail_mb_content', $content, $mb_id);
 
         mailer($config['cf_admin_email_name'], $config['cf_admin_email'], $mb_email, $subject, $content, 1);
@@ -290,7 +290,7 @@ if ($w == '') {
         include_once ('./register_form_update_mail2.php');
         $content = ob_get_contents();
         ob_end_clean();
-        
+
         $content = run_replace('register_form_update_mail_admin_content', $content, $mb_id);
 
         mailer($mb_nick, $mb_email, $config['cf_admin_email'], $subject, $content, 1);
@@ -497,7 +497,7 @@ if ($config['cf_use_email_certify'] && $old_email != $mb_email) {
     include_once ('./register_form_update_mail3.php');
     $content = ob_get_contents();
     ob_end_clean();
-    
+
     $content = run_replace('register_form_update_mail_certify_content', $content, $mb_id);
 
     mailer($config['cf_admin_email_name'], $config['cf_admin_email'], $mb_email, $subject, $content, 1);

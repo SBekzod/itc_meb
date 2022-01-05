@@ -20,7 +20,7 @@ function get_list_thumbnail($bo_table, $wr_id, $thumb_width, $thumb_height, $is_
     } else {
         $write = get_thumbnail_find_cache($bo_table, $wr_id, 'content');
         $edt = true;
-        
+
         if( $matches = get_editor_image($write['wr_content'], false) ){
             for($i=0; $i<count($matches[1]); $i++)
             {
@@ -54,7 +54,7 @@ function get_list_thumbnail($bo_table, $wr_id, $thumb_width, $thumb_height, $is_
 
     if(!$filename)
         return $empty_array;
-    
+
     if( $thumbnail_info = run_replace('get_list_thumbnail_info', array(), array('bo_table'=>$bo_table, 'wr_id'=>$wr_id, 'data_path'=>$data_path, 'edt'=>$edt, 'filename'=>$filename, 'filepath'=>$filepath, 'thumb_width'=>$thumb_width, 'thumb_height'=>$thumb_height, 'is_create'=>$is_create, 'is_crop'=>$is_crop, 'crop_mode'=>$crop_mode, 'is_sharpen'=>$is_sharpen, 'um_value'=>$um_value)) ){
         return $thumbnail_info;
     }
@@ -82,7 +82,7 @@ function get_list_thumbnail($bo_table, $wr_id, $thumb_width, $thumb_height, $is_
 
 // 게시글보기 파일 썸네일 리턴
 function get_file_thumbnail($file){
-    
+
     if( ! is_array($file) ) return '';
 
     if( preg_match('/(\.jpg|\.jpeg|\.gif|\.png|\.bmp|\.webp)$/i', $file['file']) && $contents = run_replace('get_file_thumbnail_tags', '', $file) ){
@@ -204,7 +204,7 @@ function get_view_thumbnail($contents, $thumb_width=0)
             } else {
                 $thumb_tag = '<img src="'.G5_URL.str_replace($filename, $thumb_file, $data_path).'" alt="'.$alt.'"/>';
             }
-            
+
             // $img_tag에 editor 경로가 있으면 원본보기 링크 추가
             if(strpos($img_tag, G5_DATA_DIR.'/'.G5_EDITOR_DIR) && preg_match("/\.({$config['cf_image_extension']})$/i", $filename)) {
                 $imgurl = str_replace(G5_URL, "", $src);
@@ -239,7 +239,7 @@ function thumbnail($filename, $source_path, $target_path, $thumb_width, $thumb_h
     if (!$file_ext) return;
 
     // gif, jpg, png, webp 에 대해서만 적용
-    // if ( !(isset($size[2]) && ($size[2] == 1 || $size[2] == 2 || $size[2] == 3 || $size[2] == 18)) ) 
+    // if ( !(isset($size[2]) && ($size[2] == 1 || $size[2] == 2 || $size[2] == 3 || $size[2] == 18)) )
     //     return;
 
     // $extensions 배열에 없는 확장자 라면 썸네일 만들지 않음
@@ -268,7 +268,7 @@ function thumbnail($filename, $source_path, $target_path, $thumb_width, $thumb_h
     $thumb_filename = preg_replace("/\.[^\.]+$/i", "", $filename); // 확장자제거
     // $thumb_file = "$target_path/thumb-{$thumb_filename}_{$thumb_width}x{$thumb_height}.".$ext[$size[2]];
     $thumb_file = "$target_path/thumb-{$thumb_filename}_{$thumb_width}x{$thumb_height}.".$file_ext;
-    
+
     $thumb_time = @filemtime($thumb_file);
     $source_time = @filemtime($source_file);
 
@@ -286,7 +286,11 @@ function thumbnail($filename, $source_path, $target_path, $thumb_width, $thumb_h
         $src = @imagecreatefromgif($source_file);
         $src_transparency = @imagecolortransparent($src);
     } else if ($file_ext === 'jpg') {
-        $src = @imagecreatefromjpeg($source_file);
+        try {
+            $src = @imagecreatefromjpeg($source_file);
+        } catch (Exception $err) {
+
+        }
 
         if(function_exists('exif_read_data')) {
             // exif 정보를 기준으로 회전각도 구함
