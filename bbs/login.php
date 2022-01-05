@@ -1,6 +1,7 @@
 <?php
 include_once('./_common.php');
 
+
 if( function_exists('social_check_login_before') ){
     $social_login_html = social_check_login_before();
 }
@@ -30,7 +31,10 @@ $login_file = $member_skin_path.'/login.skin.php';
 if (!file_exists($login_file))
     $member_skin_path   = G5_SKIN_PATH.'/member/basic';
 
+//error_log('skin: '.$member_skin_path."\n", 3, '/home/martin/itc_meb/log/debug.log');
+
 include_once($member_skin_path.'/login.skin.php');
+
 
 run_event('member_login_tail', $login_url, $login_action_url, $member_skin_path, $url);
 

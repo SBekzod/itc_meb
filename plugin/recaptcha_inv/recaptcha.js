@@ -1,9 +1,9 @@
 function chk_captcha()
 {
-	if ( ! jQuery('#g-recaptcha-response').val()) {
-		grecaptcha.execute();
-		return false;
-	}
+	// if ( ! jQuery('#g-recaptcha-response').val()) {
+	// 	grecaptcha.execute();
+	// 	return false;
+	// }
 
 	return true;
 }

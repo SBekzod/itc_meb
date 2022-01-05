@@ -29,22 +29,22 @@ function chk_captcha(){
 
     global $config;
 
-    $resp = null;
-
-    if ( isset($_POST["g-recaptcha-response"]) && !empty($_POST["g-recaptcha-response"]) ) {
-
-        $reCaptcha = new ReCaptcha_GNU( $config['cf_recaptcha_secret_key'] );
-
-        $resp = $reCaptcha->verify($_POST["g-recaptcha-response"], $_SERVER["REMOTE_ADDR"]);
-    }
-
-    if( ! $resp ){
-        return false;
-    }
-
-    if ($resp != null && $resp->success) {
-        return true;
-    }
+//    $resp = null;
+//
+//    if ( isset($_POST["g-recaptcha-response"]) && !empty($_POST["g-recaptcha-response"]) ) {
+//
+//        $reCaptcha = new ReCaptcha_GNU( $config['cf_recaptcha_secret_key'] );
+//
+//        $resp = $reCaptcha->verify($_POST["g-recaptcha-response"], $_SERVER["REMOTE_ADDR"]);
+//    }
+//
+//    if( ! $resp ){
+//        return false;
+//    }
+//
+//    if ($resp != null && $resp->success) {
+//        return true;
+//    }
 
     return false;
 }

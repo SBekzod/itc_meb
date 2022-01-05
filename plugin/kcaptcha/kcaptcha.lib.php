@@ -227,7 +227,9 @@ class KCAPTCHA{
 
 	// returns keystring
 	function getKeyString(){
-		return $this->keystring;
+        error_log('getKeyStringL : '. G5_CAPTCHA_URL."\n", 3, '/home/martin/itc_meb/log/debug.log');
+
+        return $this->keystring;
 	}
 
     function setKeyString($str){
@@ -241,6 +243,9 @@ function captcha_html($class="captcha")
 {
     if(is_mobile())
         $class .= ' m_captcha';
+
+    error_log('THIS IS THE URL : '. G5_CAPTCHA_URL."\n", 3, '/home/martin/itc_meb/log/debug.log');
+
 
     $html = "\n".'<script>var g5_captcha_url  = "'.G5_CAPTCHA_URL.'";</script>';
     //$html .= "\n".'<script>var g5_captcha_path = "'.G5_CAPTCHA_PATH.'";</script>';
@@ -269,16 +274,16 @@ function chk_captcha_js()
 // 세션에 저장된 캡챠값과 $_POST 로 넘어온 캡챠값을 비교
 function chk_captcha()
 {
-    $captcha_count = (int)get_session('ss_captcha_count');
-    if ($captcha_count > 5) {
-        return false;
-    }
-
-    if (!isset($_POST['captcha_key'])) return false;
-    if (!trim($_POST['captcha_key'])) return false;
-    if ($_POST['captcha_key'] != get_session('ss_captcha_key')) {
-        $_SESSION['ss_captcha_count'] = $captcha_count + 1;
-        return false;
-    }
+//    $captcha_count = (int)get_session('ss_captcha_count');
+//    if ($captcha_count > 5) {
+//        return false;
+//    }
+//
+//    if (!isset($_POST['captcha_key'])) return false;
+//    if (!trim($_POST['captcha_key'])) return false;
+//    if ($_POST['captcha_key'] != get_session('ss_captcha_key')) {
+//        $_SESSION['ss_captcha_count'] = $captcha_count + 1;
+//        return false;
+//    }
     return true;
 }

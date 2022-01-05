@@ -119,7 +119,7 @@ function set_session($session_name, $value)
 	global $g5;
 
 	static $check_cookie = null;
-	
+
 	if( $check_cookie === null ){
 		$cookie_session_name = session_name();
 		if( ! isset($g5['session_cookie_samesite']) && ! ($cookie_session_name && isset($_COOKIE[$cookie_session_name]) && $_COOKIE[$cookie_session_name]) && ! headers_sent() ){
@@ -185,7 +185,7 @@ function alert($msg='', $url='', $error=true, $post=false)
 function alert_close($msg, $error=true)
 {
     global $g5, $config, $member, $is_member, $is_admin, $board;
-    
+
     run_event('alert_close', $msg, $error);
 
     $msg = strip_tags($msg, '<br>');
@@ -745,7 +745,7 @@ function get_next_num($table)
 function get_group($gr_id, $is_cache=false)
 {
     global $g5;
-    
+
     if( is_array($gr_id) ){
         return array();
     }
@@ -773,7 +773,7 @@ function get_group($gr_id, $is_cache=false)
 function get_member($mb_id, $fields='*', $is_cache=false)
 {
     global $g5;
-    
+
     if (preg_match("/[^0-9a-z_]+/i", $mb_id))
         return array();
 
@@ -1594,7 +1594,7 @@ function sql_query($sql, $error=G5_DISPLAY_SQL_ERROR, $link=null)
     $sql = preg_replace("#^select.*from.*where.*`?information_schema`?.*#i", "select 1", $sql);
 
     $is_debug = get_permission_debug_show();
-    
+
     $start_time = $is_debug ? get_microtime() : 0;
 
     if(function_exists('mysqli_query') && G5_MYSQLI_USE) {
@@ -2115,7 +2115,7 @@ function is_utf8($str)
 function utf8_strcut( $str, $size, $suffix='...' )
 {
     if( function_exists('mb_strlen') && function_exists('mb_substr') ){
-        
+
         if(mb_strlen($str)<=$size) {
             return $str;
         } else {
@@ -2168,7 +2168,7 @@ function sql_real_escape_string($str, $link=null)
 
     if(!$link)
         $link = $g5['connect_db'];
-    
+
     if(function_exists('mysqli_connect') && G5_MYSQLI_USE) {
         return mysqli_real_escape_string($link, $str);
     }
@@ -2337,7 +2337,7 @@ function delete_editor_thumbnail($contents)
 {
     if(!$contents)
         return;
-    
+
     run_event('delete_editor_thumbnail_before', $contents);
 
     // $contents 중 img 태그 추출
@@ -2558,7 +2558,7 @@ class html_process {
         // 현재접속자 처리
         $tmp_sql = " select count(*) as cnt from {$g5['login_table']} where lo_ip = '{$_SERVER['REMOTE_ADDR']}' ";
         $tmp_row = sql_fetch($tmp_sql);
-        $http_host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : $_SERVER['SERVER_NAME']; 
+        $http_host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : $_SERVER['SERVER_NAME'];
 
         if ($tmp_row['cnt']) {
             $tmp_sql = " update {$g5['login_table']} set mb_id = '{$member['mb_id']}', lo_datetime = '".G5_TIME_YMDHIS."', lo_location = '{$g5['lo_location']}', lo_url = '{$g5['lo_url']}' where lo_ip = '{$_SERVER['REMOTE_ADDR']}' ";
@@ -2589,7 +2589,7 @@ class html_process {
             }
 
             array_multisort($order, SORT_ASC, $index, SORT_ASC, $links);
-            
+
             $links = run_replace('html_process_css_files', $links);
 
             foreach($links as $link) {
@@ -2617,13 +2617,13 @@ class html_process {
             }
 
             array_multisort($order, SORT_ASC, $index, SORT_ASC, $scripts);
-            
+
             $scripts = run_replace('html_process_script_files', $scripts);
 
             foreach($scripts as $js) {
                 if(!trim($js[1]))
                     continue;
-                
+
                 $add_version_str = (stripos($js[1], $http_host) !== false) ? '?ver='.G5_JS_VER : '';
                 $js[1] = preg_replace('#\.js([\'\"]?>)<\/script>$#i', '.js'.$add_version_str.'$1</script>', $js[1]);
 
@@ -2648,9 +2648,9 @@ class html_process {
         if($javascript)
             $nl = "\n";
         $buffer = preg_replace('#(</head>[^<]*<body[^>]*>)#', "$javascript{$nl}$1", $buffer);
-        
+
         $meta_tag = run_replace('html_process_add_meta', '');
-        
+
         if( $meta_tag ){
             /*
             </title>content<body>
@@ -2730,7 +2730,7 @@ function board_notice($bo_notice, $wr_id, $insert=false)
 function googl_short_url($longUrl)
 {
     global $config;
-    
+
     // 구글 짧은 주소는 서비스가 종료 되었습니다.
     return function_exists('run_replace') ? run_replace('googl_short_url', $longUrl) : $longUrl;
 }
@@ -2830,7 +2830,7 @@ if (!function_exists("get_sock")) {
             $host = $res[1];
             $get  = $res[2];
         }
-        
+
         $header = '';
 
         // 80번 포트로 소캣접속 시도
@@ -3047,15 +3047,15 @@ function clean_xss_tags($str, $check_entities=0, $is_remove_tags=0, $cur_str_len
     }
 
     $str_len = strlen($str);
-    
+
     $i = 0;
     while($i <= $str_len){
         $result = preg_replace('#</*(?:applet|b(?:ase|gsound|link)|embed|frame(?:set)?|i(?:frame|layer)|l(?:ayer|ink)|meta|object|s(?:cript|tyle)|title|xml)[^>]*+>#i', '', $str);
-        
+
         if( $check_entities ){
             $result = str_replace(array('&colon;', '&lpar;', '&rpar;', '&NewLine;', '&Tab;'), '', $result);
         }
-        
+
         $result = preg_replace('#([^\p{L}]|^)(?:javascript|jar|applescript|vbscript|vbs|wscript|jscript|behavior|mocha|livescript|view-source)\s*:(?:.*?([/\\\;()\'">]|$))#ius',
                 '$1$2', $result);
 
@@ -3072,7 +3072,7 @@ function clean_xss_tags($str, $check_entities=0, $is_remove_tags=0, $cur_str_len
 function clean_xss_attributes($str)
 {
     $xss_attributes_string = 'onAbort|onActivate|onAttribute|onAfterPrint|onAfterScriptExecute|onAfterUpdate|onAnimationCancel|onAnimationEnd|onAnimationIteration|onAnimationStart|onAriaRequest|onAutoComplete|onAutoCompleteError|onAuxClick|onBeforeActivate|onBeforeCopy|onBeforeCut|onBeforeDeactivate|onBeforeEditFocus|onBeforePaste|onBeforePrint|onBeforeScriptExecute|onBeforeUnload|onBeforeUpdate|onBegin|onBlur|onBounce|onCancel|onCanPlay|onCanPlayThrough|onCellChange|onChange|onClick|onClose|onCommand|onCompassNeedsCalibration|onContextMenu|onControlSelect|onCopy|onCueChange|onCut|onDataAvailable|onDataSetChanged|onDataSetComplete|onDblClick|onDeactivate|onDeviceLight|onDeviceMotion|onDeviceOrientation|onDeviceProximity|onDrag|onDragDrop|onDragEnd|onDragEnter|onDragLeave|onDragOver|onDragStart|onDrop|onDurationChange|onEmptied|onEnd|onEnded|onError|onErrorUpdate|onExit|onFilterChange|onFinish|onFocus|onFocusIn|onFocusOut|onFormChange|onFormInput|onFullScreenChange|onFullScreenError|onGotPointerCapture|onHashChange|onHelp|onInput|onInvalid|onKeyDown|onKeyPress|onKeyUp|onLanguageChange|onLayoutComplete|onLoad|onLoadedData|onLoadedMetaData|onLoadStart|onLoseCapture|onLostPointerCapture|onMediaComplete|onMediaError|onMessage|onMouseDown|onMouseEnter|onMouseLeave|onMouseMove|onMouseOut|onMouseOver|onMouseUp|onMouseWheel|onMove|onMoveEnd|onMoveStart|onMozFullScreenChange|onMozFullScreenError|onMozPointerLockChange|onMozPointerLockError|onMsContentZoom|onMsFullScreenChange|onMsFullScreenError|onMsGestureChange|onMsGestureDoubleTap|onMsGestureEnd|onMsGestureHold|onMsGestureStart|onMsGestureTap|onMsGotPointerCapture|onMsInertiaStart|onMsLostPointerCapture|onMsManipulationStateChanged|onMsPointerCancel|onMsPointerDown|onMsPointerEnter|onMsPointerLeave|onMsPointerMove|onMsPointerOut|onMsPointerOver|onMsPointerUp|onMsSiteModeJumpListItemRemoved|onMsThumbnailClick|onOffline|onOnline|onOutOfSync|onPage|onPageHide|onPageShow|onPaste|onPause|onPlay|onPlaying|onPointerCancel|onPointerDown|onPointerEnter|onPointerLeave|onPointerLockChange|onPointerLockError|onPointerMove|onPointerOut|onPointerOver|onPointerUp|onPopState|onProgress|onPropertyChange|onqt_error|onRateChange|onReadyStateChange|onReceived|onRepeat|onReset|onResize|onResizeEnd|onResizeStart|onResume|onReverse|onRowDelete|onRowEnter|onRowExit|onRowInserted|onRowsDelete|onRowsEnter|onRowsExit|onRowsInserted|onScroll|onSearch|onSeek|onSeeked|onSeeking|onSelect|onSelectionChange|onSelectStart|onStalled|onStorage|onStorageCommit|onStart|onStop|onShow|onSyncRestored|onSubmit|onSuspend|onSynchRestored|onTimeError|onTimeUpdate|onTimer|onTrackChange|onTransitionEnd|onToggle|onTouchCancel|onTouchEnd|onTouchLeave|onTouchMove|onTouchStart|onTransitionCancel|onTransitionEnd|onUnload|onURLFlip|onUserProximity|onVolumeChange|onWaiting|onWebKitAnimationEnd|onWebKitAnimationIteration|onWebKitAnimationStart|onWebKitFullScreenChange|onWebKitFullScreenError|onWebKitTransitionEnd|onWheel';
-    
+
     do {
         $count = $temp_count = 0;
 
@@ -3101,7 +3101,7 @@ function clean_xss_attributes($str)
 
 function clean_relative_paths($path){
     $path_len = strlen($path);
-    
+
     $i = 0;
     while($i <= $path_len){
         $result = str_replace('../', '', str_replace('\\', '/', $path));
@@ -3208,7 +3208,7 @@ function replace_filename($name)
     $usec = get_microtime();
     $file_path = pathinfo($name);
     $ext = $file_path['extension'];
-    $return_filename = sha1($ss_id.$_SERVER['REMOTE_ADDR'].$usec); 
+    $return_filename = sha1($ss_id.$_SERVER['REMOTE_ADDR'].$usec);
     if( $ext )
         $return_filename .= '.'.$ext;
 
@@ -3282,7 +3282,7 @@ function login_password_check($mb, $pass, $hash)
                 $sql = "ALTER TABLE `{$g5['member_table']}` ADD `mb_password2` varchar(255) NOT NULL default '' AFTER `mb_password`";
                 sql_query($sql);
             }
-            
+
             $new_password = create_hash($pass);
             $sql = " update {$g5['member_table']} set mb_password = '$new_password', mb_password2 = '$hash' where mb_id = '$mb_id' ";
             sql_query($sql);
@@ -3303,7 +3303,7 @@ function check_url_host($url, $msg='', $return_url=G5_URL, $is_redirect=false)
     $p = @parse_url(trim($url));
     $host = preg_replace('/:[0-9]+$/', '', $_SERVER['HTTP_HOST']);
     $is_host_check = false;
-    
+
     // url을 urlencode 를 2번이상하면 parse_url 에서 scheme와 host 값을 가져올수 없는 취약점이 존재함
     if ( $is_redirect && !isset($p['host']) && urldecode($url) != $url ){
         $i = 0;
@@ -3456,7 +3456,7 @@ function get_params_merge_url($params, $url=''){
         . (isset($p['host']) ? $p['host'] : '')
         . ((isset($p['path']) && $url) ? $p['path'] : '')
         . ((isset($p['port']) && $p['port']) ? ":{$p['port']}" : '');
-    
+
     $ori_params = '';
     if( $url ){
         $ori_params = !empty($p['query']) ? $p['query'] : '';
@@ -3469,12 +3469,12 @@ function get_params_merge_url($params, $url=''){
             $p['fragment'] = preg_replace('/^#/', '', $freg);
         }
     }
-    
+
     $q = array();
     if( $ori_params ){
         parse_str( $ori_params, $q );
     }
-    
+
     if( is_array($params) && $params ){
         $q = array_merge($q, $params);
     }
@@ -3632,7 +3632,7 @@ function get_member_profile_img($mb_id='', $width='', $height='', $alt='profile_
 
     static $no_profile_cache = '';
     static $member_cache = array();
-    
+
     $src = '';
 
     if( $mb_id ){
@@ -3690,9 +3690,9 @@ function get_head_title($title){
 
 function is_sms_send($is_type=''){
     global $config;
-    
+
     $is_sms_send = false;
-    
+
     // 토큰키를 사용한다면
     if(isset($config['cf_icode_token_key']) && $config['cf_icode_token_key']){
         $is_sms_send = true;
@@ -3756,7 +3756,7 @@ function check_mail_bot($ip=''){
     //아이피를 체크하여 메일 크롤링을 방지합니다.
     $check_ips = array('211.249.40.');
     $bot_message = 'bot 으로 판단되어 중지합니다.';
-    
+
     if($ip){
         foreach( $check_ips as $c_ip ){
             if( preg_match('/^'.preg_quote($c_ip).'/', $ip) ) {
@@ -3767,13 +3767,13 @@ function check_mail_bot($ip=''){
 
     // user agent를 체크하여 메일 크롤링을 방지합니다.
     $user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
-    if ($user_agent === 'Carbon' || strpos($user_agent, 'BingPreview') !== false || strpos($user_agent, 'Slackbot') !== false) { 
+    if ($user_agent === 'Carbon' || strpos($user_agent, 'BingPreview') !== false || strpos($user_agent, 'Slackbot') !== false) {
         die($bot_message);
-    } 
+    }
 }
 
 function get_call_func_cache($func, $args=array()){
-    
+
     static $cache = array();
 
     $key = md5(serialize($args));
@@ -3789,7 +3789,7 @@ function get_call_func_cache($func, $args=array()){
     } catch (Exception $e) {
         return null;
     }
-    
+
     return $result;
 }
 
@@ -3869,7 +3869,7 @@ function is_include_path_check($path='', $is_input='')
         }
 
         $extension = pathinfo($path, PATHINFO_EXTENSION);
-        
+
         if($extension && preg_match('/(jpg|jpeg|png|gif|bmp|conf|php\-x)$/i', $extension)) {
             return false;
         }
