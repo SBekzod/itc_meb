@@ -8,7 +8,7 @@ if (G5_IS_MOBILE) {
 
 if(! defined('_INDEX_')) define('_INDEX_', TRUE);
 
-error_log("\nG5_THEME_SHOP_PATH :::". G5_THEME_SHOP_PATH, 3, '/home/martin/itc_meb/log/debug.log');
+//error_log("\nG5_THEME_SHOP_PATH :::". G5_THEME_SHOP_PATH, 3, '/home/martin/itc_meb/log/debug.log');
 include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 ?>
 

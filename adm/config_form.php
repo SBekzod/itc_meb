@@ -225,12 +225,12 @@ if(!isset($config['cf_member_img_size'])) {
                 ADD `cf_member_img_height` int(11) NOT NULL DEFAULT '0' AFTER `cf_member_img_width`
     ", true);
 
-    $sql = " update {$g5['config_table']} set cf_member_img_size = 50000, cf_member_img_width = 60, cf_member_img_height = 60 ";
+    $sql = " update {$g5['config_table']} set cf_member_img_size = 50000000, cf_member_img_width = 660, cf_member_img_height = 660 ";
     sql_query($sql, false);
 
-    $config['cf_member_img_size'] = 50000;
-    $config['cf_member_img_width'] = 60;
-    $config['cf_member_img_height'] = 60;
+    $config['cf_member_img_size'] = 50000000;
+    $config['cf_member_img_width'] = 660;
+    $config['cf_member_img_height'] = 660;
 }
 
 // 소셜 로그인 관리 테이블 없을 경우 생성
@@ -1445,7 +1445,7 @@ function fconfigform_submit(f)
             if ( cf_intercept_ips[i].trim() ) {
                 cf_intercept_ips[i] = cf_intercept_ips[i].replace(".", "\.");
                 cf_intercept_ips[i] = cf_intercept_ips[i].replace("+", "[0-9\.]+");
-                
+
                 var re = new RegExp(cf_intercept_ips[i]);
                 if ( re.test(current_user_ip) ){
                     alert("현재 접속 IP : "+ current_user_ip +" 가 차단될수 있기 때문에, 다른 IP를 입력해 주세요.");

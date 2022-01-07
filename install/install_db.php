@@ -15,7 +15,7 @@ include_once ('../lib/common.lib.php');
 include_once('./install.function.php');    // 인스톨 과정 함수 모음
 
 include_once('../lib/hook.lib.php');    // hook 함수 파일
-include_once('../lib/get_data.lib.php');    
+include_once('../lib/get_data.lib.php');
 include_once('../lib/uri.lib.php');    // URL 함수 파일
 include_once('../lib/cache.lib.php');
 
@@ -201,9 +201,9 @@ if($g5_install || !$result) {
                     cf_member_icon_size = '5000',
                     cf_member_icon_width = '22',
                     cf_member_icon_height = '22',
-                    cf_member_img_size = '50000',
-                    cf_member_img_width = '60',
-                    cf_member_img_height = '60',
+                    cf_member_img_size = '50000000',
+                    cf_member_img_width = '660',
+                    cf_member_img_height = '660',
                     cf_login_minutes = '10',
                     cf_image_extension = '{$image_extension}',
                     cf_flash_extension = 'swf',

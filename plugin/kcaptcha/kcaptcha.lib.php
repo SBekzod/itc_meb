@@ -227,7 +227,7 @@ class KCAPTCHA{
 
 	// returns keystring
 	function getKeyString(){
-        error_log('getKeyStringL : '. G5_CAPTCHA_URL."\n", 3, '/home/martin/itc_meb/log/debug.log');
+//        error_log('getKeyStringL : '. G5_CAPTCHA_URL."\n", 3, '/home/martin/itc_meb/log/debug.log');
 
         return $this->keystring;
 	}
@@ -244,7 +244,7 @@ function captcha_html($class="captcha")
     if(is_mobile())
         $class .= ' m_captcha';
 
-    error_log('THIS IS THE URL : '. G5_CAPTCHA_URL."\n", 3, '/home/martin/itc_meb/log/debug.log');
+//    error_log('THIS IS THE URL : '. G5_CAPTCHA_URL."\n", 3, '/home/martin/itc_meb/log/debug.log');
 
 
     $html = "\n".'<script>var g5_captcha_url  = "'.G5_CAPTCHA_URL.'";</script>';

@@ -9,7 +9,7 @@ if(G5_IS_MOBILE) {
 }
 
 
-error_log("\nPASSED 5\n", 3, '/home/martin/itc_meb/log/debug.log');
+//error_log("\nPASSED 5\n", 3, '/home/martin/itc_meb/log/debug.log');
 
 
 include_once(G5_THEME_PATH.'/head.sub.php');
@@ -37,23 +37,23 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/owlcarousel/owl.carou
     	<div class="inner">
             <?php if(defined('G5_COMMUNITY_USE') && G5_COMMUNITY_USE) { ?>
     		<ul id="hd_define">
-    			<li><a href="<?php echo G5_URL ?>/">커뮤니티</a></li>
-    			<li class="active"><a href="<?php echo G5_SHOP_URL ?>/">쇼핑몰</a></li>
+    			<li><a href="<?php echo G5_URL ?>/">Community</a></li>
+    			<li class="active"><a href="<?php echo G5_SHOP_URL ?>/">Shop</a></li>
     		</ul>
             <?php } ?>
 			<ul id="hd_qnb">
 	            <li><a href="<?php echo G5_BBS_URL ?>/faq.php">FAQ</a></li>
-	            <li><a href="<?php echo G5_BBS_URL ?>/qalist.php">1:1문의</a></li>
-	            <li><a href="<?php echo G5_SHOP_URL ?>/personalpay.php">개인결제</a></li>
-	            <li><a href="<?php echo G5_SHOP_URL ?>/itemuselist.php">사용후기</a></li>
-	            <li><a href="<?php echo G5_SHOP_URL ?>/itemqalist.php">상품문의</a></li>
-				<li class="bd"><a href="<?php echo G5_SHOP_URL; ?>/couponzone.php">쿠폰존</a></li>
+	            <li><a href="<?php echo G5_BBS_URL ?>/qalist.php">1:1chat</a></li>
+	            <li><a href="<?php echo G5_SHOP_URL ?>/personalpay.php">payment</a></li>
+	            <li><a href="<?php echo G5_SHOP_URL ?>/itemuselist.php">product reviews</a></li>
+	            <li><a href="<?php echo G5_SHOP_URL ?>/itemqalist.php">product inquiry</a></li>
+				<li class="bd"><a href="<?php echo G5_SHOP_URL; ?>/couponzone.php">coupon zone</a></li>
 	        </ul>
 		</div>
 	</div>
     <div id="hd_wrapper">
         <div id="logo">
-        	<a href="<?php echo G5_SHOP_URL; ?>/"><img src="<?php echo G5_DATA_URL; ?>/common/logo_img" alt="<?php echo $config['cf_title']; ?>"></a>
+        	<a href="<?php echo G5_SHOP_URL; ?>/"><img src="<?php echo G5_DATA_URL; ?>/common/brand_logo.svg" alt="<?php echo $config['cf_title']; ?>"></a>
         </div>
 
 		<div class="hd_sch_wr">
@@ -61,7 +61,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/owlcarousel/owl.carou
 	            <legend>쇼핑몰 전체검색</legend>
 	            <form name="frmsearch1" action="<?php echo G5_SHOP_URL; ?>/search.php" onsubmit="return search_submit(this);">
 	            <label for="sch_str" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
-	            <input type="text" name="q" value="<?php echo stripslashes(get_text(get_search_string($q))); ?>" id="sch_str" required placeholder="검색어를 입력해주세요">
+	            <input type="text" name="q" value="<?php echo stripslashes(get_text(get_search_string($q))); ?>" id="sch_str" required placeholder="write here to search">
 	            <button type="submit" id="sch_submit" value="검색"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">검색</span></button>
 	            </form>
 	            <script>
@@ -88,20 +88,20 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/owlcarousel/owl.carou
 			</li>
 			<li class="shop_cart"><a href="<?php echo G5_SHOP_URL; ?>/cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="sound_only">장바구니</span><span class="count"><?php echo get_boxcart_datas_count(); ?></span></a></li>
             <?php } else { ?>
-            <li class="login"><a href="<?php echo G5_BBS_URL ?>/login.php?url=<?php echo $urlencode; ?>">로그인</a></li>
+            <li class="login"><a href="<?php echo G5_BBS_URL ?>/login.php?url=<?php echo $urlencode; ?>">login</a></li>
             <?php }  ?>
         </ul>
     </div>
 
     <div id="hd_menu">
-    	<button type="button" id="menu_open"><i class="fa fa-bars" aria-hidden="true"></i> 카테고리</button>
+    	<button type="button" id="menu_open"><i class="fa fa-bars" aria-hidden="true"></i> Product category</button>
 		<?php include_once(G5_THEME_SHOP_PATH.'/category.php'); // 분류 ?>
 		<ul class="hd_menu">
-            <li><a href="<?php echo shop_type_url(1); ?>">히트상품</a></li>
-            <li><a href="<?php echo shop_type_url(2); ?>">추천상품</a></li>
-            <li><a href="<?php echo shop_type_url(3); ?>">최신상품</a></li>
-            <li><a href="<?php echo shop_type_url(4); ?>">인기상품</a></li>
-            <li><a href="<?php echo shop_type_url(5); ?>">할인상품</a></li>
+            <li><a href="<?php echo shop_type_url(1); ?>">HITS</a></li>
+            <li><a href="<?php echo shop_type_url(2); ?>">Recommended</a></li>
+            <li><a href="<?php echo shop_type_url(3); ?>">Recent</a></li>
+            <li><a href="<?php echo shop_type_url(4); ?>">Popular</a></li>
+            <li><a href="<?php echo shop_type_url(5); ?>">Discount Products</a></li>
         </ul>
     </div>
 </div>

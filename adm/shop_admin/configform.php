@@ -1281,7 +1281,7 @@ if(!$default['de_kakaopay_cancelpwd']){
                 <?php echo help("쇼핑몰 상단로고를 직접 올릴 수 있습니다. 이미지 파일만 가능합니다."); ?>
                 <input type="file" name="logo_img" id="logo_img">
                 <?php
-                $logo_img = G5_DATA_PATH."/common/logo_img";
+                $logo_img = G5_DATA_PATH."/common/brand_logo.svg";
                 if (file_exists($logo_img))
                 {
                     $size = getimagesize($logo_img);
@@ -1706,7 +1706,7 @@ function fconfig_check(f)
     <?php echo get_editor_js('de_baesong_content'); ?>
     <?php echo get_editor_js('de_change_content'); ?>
     <?php echo get_editor_js('de_guest_privacy'); ?>
-    
+
     var msg = "",
         pg_msg = "";
 
@@ -1742,7 +1742,7 @@ function fconfig_check(f)
 $(function() {
 
     $(document).ready(function () {
-        
+
         $("#de_global_nhnkcp_naverpay").on("click", function(e){
             if ( $(this).prop('checked') ) {
                 $("#de_easy_nhnkcp_naverpay").prop('checked', true);
@@ -1762,7 +1762,7 @@ $(function() {
         }
 
         hash_goto_scroll();
-        
+
         $(document).on("click", ".pg_test_conf_link", function(e){
             e.preventDefault();
 
@@ -1895,14 +1895,14 @@ $(function() {
 
     $(document).on("change", "#de_taxsave_use", function(e){
         var $val = $(this).val();
-        
+
         if( parseInt($val) > 0 ){
             $("#de_taxsave_types").show();
         } else {
             $("#de_taxsave_types").hide();
         }
     });
-    
+
     // 현금영수증 발급수단 중 무통장입금은 무조건 체크처리
     document.getElementById("de_taxsave_types_account").checked = true;
     document.getElementById("de_taxsave_types_account").disabled = true;
@@ -2009,7 +2009,7 @@ if($default['de_iche_use'] || $default['de_vbank_use'] || $default['de_hp_use'] 
         }
 
         $log_path = G5_SHOP_PATH.'/inicis/log';
-        
+
         try {
             if( ! is_dir($log_path) && is_writable(G5_SHOP_PATH.'/inicis/') ){
                 @mkdir($log_path, G5_DIR_PERMISSION);

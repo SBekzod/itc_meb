@@ -129,7 +129,7 @@
 #sbsk .cart_del {border:0;width:35px;height:35px;text-align:center;position:absolute;right:0;bottom:0;color:#c5c8ca;background:#fff;font-size:1.25em}
 
 /*위시리스트*/
-#wish {}	
+#wish {}
 #wish li {position:relative;border-bottom:1px solid #f6f6f6;padding:15px}
 #wish li:after {display:block;visibility:hidden;clear:both;content:""}
 #wish .li_empty {text-align:center;line-height:100px}
@@ -212,7 +212,7 @@
 .sct_10 .sct_dict {display:block;text-decoration:line-through;font-weight:normal;font-size:0.85em;color:#858a8d}
 
 .sct_10 .sct_sns_wrap {display:none;width:100%;height:100%;position:fixed;top:0;left:0;z-index:999}
-.sct_10 .sct_sns {position:absolute;top:50%;left:50%;background:#fff;text-align:center;width:245px;max-height:300px;margin-left:-125px;margin-top:-180px;overflow-y:auto;border-radius:5px;-webkit-box-shadow:1px 1px 18px rgba(0,0,0,0.2);-moz-box-shadow: 1px 1px 18px rgba(0,0,0,0.2);box-shadow: 1px 1px 18px rgba(0,0,0,0.2);border:1px solid #dde7e9;background:#fff;border-radius:3px}  
+.sct_10 .sct_sns {position:absolute;top:50%;left:50%;background:#fff;text-align:center;width:245px;max-height:300px;margin-left:-125px;margin-top:-180px;overflow-y:auto;border-radius:5px;-webkit-box-shadow:1px 1px 18px rgba(0,0,0,0.2);-moz-box-shadow: 1px 1px 18px rgba(0,0,0,0.2);box-shadow: 1px 1px 18px rgba(0,0,0,0.2);border:1px solid #dde7e9;background:#fff;border-radius:3px}
 .sct_10 .sct_sns h3 {padding:15px;border-bottom:1px solid #e8e8e8;text-align:left}
 .sct_10 .sct_sns a {display:inline-block;border-radius:50%;width:50px;height:50px;line-height:25px;text-align:center;padding:10px 0;margin:20px 5px}
 .sct_10 .sct_sns .share-facebook {background:#415b92}
@@ -285,7 +285,7 @@
 .sct_40 .sct_dict {text-decoration:line-through;font-weight:normal;display:block;font-size:0.85em;color:#858a8d}
 
 .sct_40 .sct_sns_wrap {display:none;width:100%;height:100%;position:fixed;top:0;left:0;z-index:999}
-.sct_40 .sct_sns {position:absolute;top:50%;left:50%;background:#fff;text-align:center;width:245px;max-height:300px;margin-left:-125px;margin-top:-180px;overflow-y:auto;border-radius:5px;-webkit-box-shadow:1px 1px 18px rgba(0,0,0,0.2);-moz-box-shadow: 1px 1px 18px rgba(0,0,0,0.2);box-shadow: 1px 1px 18px rgba(0,0,0,0.2);border:1px solid #dde7e9;background:#fff;border-radius:3px}    
+.sct_40 .sct_sns {position:absolute;top:50%;left:50%;background:#fff;text-align:center;width:245px;max-height:300px;margin-left:-125px;margin-top:-180px;overflow-y:auto;border-radius:5px;-webkit-box-shadow:1px 1px 18px rgba(0,0,0,0.2);-moz-box-shadow: 1px 1px 18px rgba(0,0,0,0.2);box-shadow: 1px 1px 18px rgba(0,0,0,0.2);border:1px solid #dde7e9;background:#fff;border-radius:3px}
 .sct_40 .sct_sns h3 {padding:15px;border-bottom:1px solid #e8e8e8;text-align:left}
 .sct_40 .sct_sns a {display:inline-block;border-radius:50%;width:50px;height:50px;line-height:25px;text-align:center;padding:10px 0;margin:20px 5px}
 .sct_40 .sct_sns .share-facebook {background:#415b92}
@@ -340,7 +340,7 @@
 .smt_10 .sct_dict {text-decoration:line-through;font-weight:normal;display:block;font-size:0.85em;color:#858a8d}
 
 .smt_10 .sct_sns_wrap {display:none;width:100%;height:100%;position:fixed;top:0;left:0;z-index:999}
-.smt_10 .sct_sns {position:absolute;top:50%;left:50%;background:#fff;text-align:center;width:245px;max-height:300px;margin-left:-125px;margin-top:-180px;overflow-y:auto;border-radius:5px;-webkit-box-shadow:1px 1px 18px rgba(0,0,0,0.2);-moz-box-shadow: 1px 1px 18px rgba(0,0,0,0.2);box-shadow: 1px 1px 18px rgba(0,0,0,0.2);border:1px solid #dde7e9;background:#fff;border-radius:3px}    
+.smt_10 .sct_sns {position:absolute;top:50%;left:50%;background:#fff;text-align:center;width:245px;max-height:300px;margin-left:-125px;margin-top:-180px;overflow-y:auto;border-radius:5px;-webkit-box-shadow:1px 1px 18px rgba(0,0,0,0.2);-moz-box-shadow: 1px 1px 18px rgba(0,0,0,0.2);box-shadow: 1px 1px 18px rgba(0,0,0,0.2);border:1px solid #dde7e9;background:#fff;border-radius:3px}
 .smt_10 .sct_sns h3 {padding:15px;border-bottom:1px solid #e8e8e8;text-align:left}
 .smt_10 .sct_sns a {display:inline-block;border-radius:50%;width:50px;height:50px;line-height:25px;text-align:center;padding:10px 0;margin:20px 5px}
 .smt_10 .sct_sns .share-facebook {background:#415b92}
@@ -376,7 +376,7 @@
 .smt_20 .sct_cost {margin:5px 0 10px;font-size:1.25em;font-weight:bold}
 .smt_20 .sct_dict {text-decoration:line-through;display:block;font-size:0.85em;color:#858a8d}
 
-.smt_20 .sct_sns {margin-bottom:10px} 
+.smt_20 .sct_sns {margin-bottom:10px}
 .smt_20 .sct_sns a {display:inline-block;border-radius:50%;width:30px;height:30px;line-height:28px;margin-right:5px;text-align:center}
 .smt_20 .sct_sns .share-facebook {background:#415b92}
 .smt_20 .sct_sns .share-twitter {background:#35b3dc}
@@ -400,7 +400,7 @@
 
 
 /* 메인 상품 목록 스킨 40 */
-.smt_40 {background:#fff;padding:20px;border:1px solid #e3e5e8}
+.smt_40 {background:#e5e5e5;padding:20px;border:1px solid #e5e5e5}
 .smt_40 .sct_li {position:relative;float:left;width:20%;margin:0 8px}
 .smt_40 .sct_last {}
 .smt_40 .sct_clear {clear:both}

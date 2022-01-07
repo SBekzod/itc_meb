@@ -17,7 +17,7 @@ function get_mshop_category($ca_id, $len)
 $mshop_categories = get_shop_category_array(true);
 ?>
 <div id="category">
-	<h2>전체메뉴</h2>
+	<h2>FULL MENU</h2>
     <?php
     $i = 0;
     foreach($mshop_categories as $cate1){
@@ -33,7 +33,7 @@ $mshop_categories = get_shop_category_array(true);
             $j=0;
             foreach($cate1 as $key=>$cate2){
                 if( empty($cate2) || $key === 'text' ) continue;
-                
+
                 $mshop_ca_row2 = $cate2['text'];
                 if($j == 0)
                     echo '<ul class="sub_cate sub_cate1">'.PHP_EOL;
