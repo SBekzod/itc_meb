@@ -1,6 +1,6 @@
 <?php
 include_once('./_common.php');
-
+// TEST
 
 if( function_exists('social_check_login_before') ){
     $social_login_html = social_check_login_before();
